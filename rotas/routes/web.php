@@ -56,3 +56,16 @@ Route::get('/semregra/{nome?}', function ($nome = null) {
     }
 });
 // default parameter, quando o parametro não for passado
+
+Route::prefix('app')->group(function () {
+    Route::get("/", function (){
+        return "Page main";
+    });
+    Route::get("profile", function (){
+        return "Page Profile";
+    });
+    Route::get("abount", function (){
+        return "My abount";
+    });
+});
+
