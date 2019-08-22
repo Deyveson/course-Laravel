@@ -21,11 +21,4 @@ Comandos Laravel `php artisan`;
 
 Listar todas as rotas registradas `php artisan route:list`;
 
-## Installation and run
-
-1. Clone this repository: `git clone https://github.com/Deyveson/Laravel-Project.git`
-2. `cd` into the `initial_project` folder and run the following commands:
-    1. Run App `php artisan serve`
-3. Open your browser and see the server running on `localhost:8000/`.
-
-
+Iniciar a aplicação `php artisan serve`;
