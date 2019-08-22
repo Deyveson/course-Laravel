@@ -22,6 +22,3 @@ Comandos Laravel `php artisan`;
 Listar todas as rotas registradas `php artisan route:list`;
 
 Iniciar a aplicação `php artisan serve`;
-
-
-TESTE IDE
