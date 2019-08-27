@@ -91,4 +91,23 @@ Route::get('/hellonome/{nome}/{sobrenome}', function ($nome, $sobrenome) {
 });
 
 
+Route::get('rest/hello', function () {
+    return "Hello {GET}";
+});
+
+Route::post('rest/hello', function () {
+    return "Hello {POST}";
+});
+Route::delete('rest/hello', function () {
+    return "Hello {delete}";
+});
+Route::put('rest/hello', function () {
+    return "Hello {put}";
+});
+Route::patch('rest/hello', function () {
+    return "Hello {patch}";
+});
+Route::options('rest/hello', function () {
+    return "Hello {options}";
+});
 

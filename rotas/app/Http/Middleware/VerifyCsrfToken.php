@@ -19,6 +19,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        '/rest*'
     ];
+    //retirando a verificação da rota /rest*
 }
