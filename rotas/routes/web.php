@@ -1,16 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return "<h1>Laravel</h1>";
@@ -111,3 +101,9 @@ Route::options('rest/hello', function () {
     return "Hello {options}";
 });
 
+Route::post('rest/imprimir', function (Request $req) {
+    $nome = $req->input('nome');
+    $idade = $req->input('idade');
+
+    return "Hello $nome, $idade anos. !! (POST)";
+});
