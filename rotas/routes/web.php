@@ -106,4 +106,19 @@ Route::post('rest/imprimir', function (Request $req) {
     $idade = $req->input('idade');
 
     return "Hello $nome, $idade anos. !! (POST)";
+
+    //pegando dados do formulario com request
 });
+
+
+Route::match(['get', 'post'], '/rest/hello2', function (){
+    return "Hello Word 2";
+    //atendendo 2 metodos http 'get' 'post'
+});
+
+
+Route::any('/rest/hello3', function (){
+    return "Hello Word 3";
+    //atendendo todos os metodos '
+});
+
