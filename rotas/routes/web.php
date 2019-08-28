@@ -111,14 +111,34 @@ Route::post('rest/imprimir', function (Request $req) {
 });
 
 
-Route::match(['get', 'post'], '/rest/hello2', function (){
+Route::match(['get', 'post'], '/rest/hello2', function () {
     return "Hello Word 2";
     //atendendo 2 metodos http 'get' 'post'
 });
 
 
-Route::any('/rest/hello3', function (){
+Route::any('/rest/hello3', function () {
     return "Hello Word 3";
     //atendendo todos os metodos '
 });
 
+Route::get('/produtos', function () {
+    echo "<h1>Produtos</h1>";
+    echo "<ol>";
+    echo "<li>Notebook</li>";
+    echo "<li>Impressora</li>";
+    echo "<li>Mouse</li>";
+    echo "</ol>";
+})->name('meusprodutos');
+// declarando um nome pra rota
+
+Route::get('linkprodutos', function () {
+    $url = route('meusprodutos');
+    echo "<a href=\"" . $url ."\">Meus Produtos </a>";
+});
+//consumindo uma rota especifica pelo nome, mesmo que o caminho for trocado não afeta o funcionamento
+
+Route::get('redirecionarprodutos', function (){
+    return redirect()->route('meusprodutos');
+});
+// Usando função do laravel (redirect) para redirecionar a rota
