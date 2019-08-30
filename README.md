@@ -17,7 +17,7 @@ Eloquent ORM, relacionamentos, integração com Angular, autenticação, filas d
 
 Criando projeto novo via terminal `laravel new nome_projeto`;
 
-Criando controler via terminal `php artisan make:controller MeuControlador`;
+Criando controler via terminal `php artisan make:controller MeuControlador --resource`;
 
 Comandos Laravel `php artisan`;
 

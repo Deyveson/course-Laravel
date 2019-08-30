@@ -19,6 +19,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+       "/cliente"
     ];
+//  Para não verificar o token da rota especifica
+
 }
