@@ -34,9 +34,13 @@ class ClienteControlador extends Controller
      */
     public function store(Request $request)
     {
-        $s = 'Armazenar: ';
-        $s .= 'Nome: ' . $request->input('nome') . ' e ';
-        $s .= 'Idade: ' . $request->input('idade');
+//        $s = 'Armazenar: ';
+//        $s .= 'Nome: ' . $request->input('nome') . ' e ';
+//        $s .= 'Idade: ' . $request->input('idade');
+
+        $s = "Armazenar = Nome: {$request->input('nome')} Idade: {$request->input('idade')}";
+
+        // Duas maneiras de concatenação
 
         return response($s, 201);
         //retornando um response com o codigo 201 (Created)
@@ -65,7 +69,7 @@ class ClienteControlador extends Controller
      */
     public function edit($id)
     {
-        //
+        return "Formulario para Editar Cliente com ID: " . $id;
     }
 
     /**
@@ -77,7 +81,10 @@ class ClienteControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $s = "Atualizar Cliente com id $id :";
+        $s .= "Nome: " . $request->input('nome') . " e ";
+        $s .= "Idade: " . $request->input('idade');
+        return response($s, 200);
     }
 
     /**
@@ -88,6 +95,11 @@ class ClienteControlador extends Controller
      */
     public function destroy($id)
     {
-        //
+        return response("Apagago cliente com ID: $id", 200);
+    }
+
+    public function requisitar(Request $request)
+    {
+        echo "nome: " . $request->input('nome');
     }
 }

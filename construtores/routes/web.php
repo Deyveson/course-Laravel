@@ -14,3 +14,4 @@ Route::get('/nomes/{id}', 'MeuControlador@getNomeByID');
 
 Route::resource('/cliente', 'ClienteControlador');
 
+Route::post('/cliente/requisitar', 'ClienteControlador@requisitar');
