@@ -60,3 +60,7 @@ Route::get('/email/{email}', function ($email) {
     // Verificando se a view existe 'View::exists('nome_view')'
 });
 
+
+Route::get('/vai', function (){
+    return view('pagina');
+});
