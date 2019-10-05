@@ -18,4 +18,8 @@ class ProdutoControlador extends Controller
         $produtos = [];
         return view('produtos', compact('produtos'));
     }
+
+    public function secaoprodutos($palavra){
+        return view('secao_Produtos', compact('palavra'));
+    }
 }

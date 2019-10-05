@@ -4,6 +4,8 @@
     </head>
     <body>
 
-        <script src="{{ URL::to('js/app.js')}}" type="text/javascript"></script>
+        @yield('minha_secao_produtos')
+
+    <script src="{{ URL::to('js/app.js')}}" type="text/javascript"></script>
     </body>
 </html>

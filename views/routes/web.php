@@ -60,9 +60,10 @@ Route::get('/email/{email}', function ($email) {
     // Verificando se a view existe 'View::exists('nome_view')'
 });
 
-
 Route::get('/vai', function (){
     return view('pagina');
 });
 
 Route::get('/produtos', 'ProdutoControlador@listar');
+
+Route::get('/secaoprodutos/{palavra}', 'ProdutoControlador@secaoprodutos');
