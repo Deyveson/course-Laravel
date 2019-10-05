@@ -16,7 +16,6 @@ class ProdutoControlador extends Controller
         ];
 
         $produtos = [];
-
         return view('produtos', compact('produtos'));
     }
 }
