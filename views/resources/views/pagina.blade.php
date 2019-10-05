@@ -10,6 +10,7 @@
         @alerta(['tipo'=>'danger', 'titulo' => 'Erro fatal'])
             <strong> Erro: </strong> Sua Mensagem de erro
         @endalerta
+        {{--    @alerta chamando meu component atraves tag @endalerta      --}}
 
         @alerta(['tipo'=>'warning', 'titulo' => 'Erro 404'])
             <strong> Erro: </strong> Sua Mensagem de erro

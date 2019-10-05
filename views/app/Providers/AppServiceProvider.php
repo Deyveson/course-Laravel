@@ -27,5 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::component('components.meucomponente', 'alerta');
+        // Declarando meu component e nomeando a TAG
+        // Blade::component('nome_component', 'TAG')
     }
 }
