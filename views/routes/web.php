@@ -64,3 +64,5 @@ Route::get('/email/{email}', function ($email) {
 Route::get('/vai', function (){
     return view('pagina');
 });
+
+Route::get('/produtos', 'ProdutoControlador@listar');
